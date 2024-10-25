@@ -12,4 +12,4 @@ class MenuItemsView(generics.ListCreateAPIView):
     serializer_class = MenuItemSerializer
     ordering_fields = ['price', 'inventory']
     filterset_fields = ['price', 'inventory']
-    serach_fields = ['category']
+    search_fields = ['category']
