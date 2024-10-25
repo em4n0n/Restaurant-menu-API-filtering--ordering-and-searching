@@ -13,3 +13,7 @@ class MenuItemsView(generics.ListCreateAPIView):
     ordering_fields = ['price', 'inventory']
     filterset_fields = ['price', 'inventory']
     search_fields = ['category']
+
+class MenuItemDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = MenuItem.objects.all()
+    serializer_class = MenuItemSerializer
